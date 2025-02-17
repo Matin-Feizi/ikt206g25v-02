@@ -22,10 +22,10 @@ jobs:
           dotnet-version: 9.0
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore GitHubLibrary/GitHubLibrary.csproj
 
       - name: Build project
-        run: dotnet build --no-restore
+        run: dotnet build GitHubLibrary/GitHubLibrary.csproj --no-restore
 
       - name: Run tests
-        run: dotnet test --no-build --verbosity normal
+        run: dotnet test GitHubLibrary.Tests/GitHubLibrary.Tests.csproj --no-build --verbosity normal
